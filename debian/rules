@@ -1,0 +1,10 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python2,python3
+
+override_dh_auto_install:
+	python  setup.py install --install-layout=deb --root=$(CURDIR)/debian/python-csvkit
+	# cli tools are provided only by the py3k package
+	rm -rf $(CURDIR)/debian/python-csvkit/usr/bin
+	python3 setup.py install --install-layout=deb --root=$(CURDIR)/debian/python3-csvkit

@@ -1,0 +1,36 @@
+Source: csvkit
+Section: python
+Priority: optional
+Maintainer: Sandro Tosi <morph@debian.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), python, python3, dh-python, python-setuptools, python3-setuptools
+Standards-Version: 3.9.6
+Homepage: https://github.com/onyxfish/csvkit
+Vcs-Git: git://anonscm.debian.org/python-modules/packages/csvkit.git
+Vcs-Browser: http://anonscm.debian.org/cgit/python-modules/packages/csvkit.git/
+
+Package: python-csvkit
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends}
+Suggests: python-openpyxl, python-dbf
+Description: library of utilities for working with CSV
+ csvkit is a suite of utilities for converting to and working with CSV, the king
+ of tabular file formats.
+ .
+ It is inspired by pdftk, gdal and the original csvcut utility by Joe Germuska
+ and Aaron Bycoffe.
+ .
+ The command-line tools are provided by the python3-csvkit package.
+
+Package: python3-csvkit
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}
+Suggests: python3-openpyxl, python3-dbf
+Description: library of utilities for working with CSV (Python 3)
+ csvkit is a suite of utilities for converting to and working with CSV, the king
+ of tabular file formats.
+ .
+ It is inspired by pdftk, gdal and the original csvcut utility by Joe Germuska
+ and Aaron Bycoffe.
+ .
+ This package contains the Python3 version of csvkit and the command-line tools.

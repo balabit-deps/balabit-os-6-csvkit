@@ -1,0 +1,13 @@
+csvkit (0.9.1-2) unstable; urgency=medium
+
+  * debian/patches/dependencies-greater-or-equal.patch
+    - set python modules dependecies to 'greater or equal' instead of strictly
+      'equal'; patch by Alexandre Viau; Closes: #790913
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 18 Aug 2015 07:54:38 +0100
+
+csvkit (0.9.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #790699)
+
+ -- Sandro Tosi <morph@debian.org>  Tue, 30 Jun 2015 18:25:47 -0400
